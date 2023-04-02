@@ -1,24 +1,29 @@
 import { useState } from 'react'
-import {Routes, Route} from 'react-router-dom'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+
 import Product from './component/Product'
-import AddProduct from './component/AddProduct'
-import EditProduct from './component/EditProduct'
+import AddProduct from './component/product/AddProduct'
+
 import { useRequest } from 'ahooks'
 import Mui from './component/Mui'
-import TableProduct from './component/TableProduct'
-// import 'antd/dist/reset.css';
+import He from './component/layout/Header'
+import UpdateProduct from './component/product/UpdateProduct'
+
+
 function App() {
-  
+
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Product/>}/>
-        <Route path='/add' element={<AddProduct/>}/>
-        <Route path='/edit/:id' element={<EditProduct/>}/>
-        <Route path='/mui-test' element={<Mui/>}/>
-        <Route path='/list-product' element={<TableProduct/>}/>
+
+        <Route path="/" element={<He />}>
+          <Route index element={<Product />} />
+          <Route path='/add' element={<AddProduct />} />
+          <Route path='/update/:id' element={<UpdateProduct/>}/>
+          <Route path='/mui-test' element={<Mui />} />
+        </Route>
+
       </Routes>
     </div>
   )

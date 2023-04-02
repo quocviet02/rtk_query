@@ -23,7 +23,8 @@ const Product = (props: Props) => {
         
     //   product?.filter((item)=>item.id !== id)
         
-        dmm tiếp
+        console.log(4);
+        
     } 
     console.log(product);
     

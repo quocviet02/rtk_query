@@ -47,4 +47,3 @@ const AddProduct = (props: Props) => {
   )
 }
 
-export default AddProduct
